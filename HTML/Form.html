@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Form 1 -->
+ <form action="Form2.html" method="post">
+    <label for="firstName">First Name:</label><br>
+    <input type="text"><br>
+    <label for="lasttName" id="lastName" name="lName">Last Name:</label><br>
+    <input type="text"><br>
+    <input type="submit" value="submit">
+ </form>
+
+<!-- Form 2 -->
+<form>
+    <input type="radio" id="html" value="HTML">
+    <label for="html">HTML</label><br>
+    <input type="radio" id="CSS" value="CSS">
+    <label for="CSS">CSS</label><br>
+    <input type="radio" id="JS" value="Javascript">
+    <label for="JS">Javascript</label><br>
+    <input type="radio" id="Coldfusion" value="Coldfusion">
+    <label for="Coldfusion" style="color: #ff8c00;">Coldfusion</label>
+</form>
+<!-- Form 3 -->
+<form method="post">
+    <fieldset>
+        <legend>Pick your favorite language:</legend>
+
+        <input type="radio" id="htmlRad" name="language" value="html">
+        <label for="htmlRad">HTML</label><br>
+        <input  type="radio" id="cssRad" name="language" value="css">
+        <label for="cssRad">CSS</label><br>
+        <input type="radio" id="jsRad" name="language" value="javascript">
+        <label for="jsRad">Javascript</label><br>
+        <input type="submit" value="Submit Language">
+    </fieldset>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+a:link{
+    color:blue;
+}
+
+a:visited{
+    color:purple;
+}
+
+.test::before{
+    content: "Before the main content";
+}
+
+.test::after{
+    content: "After the content";
+}

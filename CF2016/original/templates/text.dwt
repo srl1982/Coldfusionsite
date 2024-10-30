@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Untitled Document</title>
+<!-- TemplateEndEditable -->
+<link href="../styles/hdStreet.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="../script/jquery.js"></script>
+<script type="text/javascript" src="../script/menu.js"></script>
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="header"> <a href="#"><img src="../images/logo.png" alt="logo" name="logo" width="188" height="181" id="logo" /></a>
+    <p id="mainTitle"><img src="../images/mainTitle.png" width="398" height="158" alt="HD Street Concert Band" /><span>HD Street Concert Band</span></p>
+<ul>
+       	<li><a href="../siteMap.html">Site Map</a></li>
+        <li><a href="../contactUs.html">Contact us</a></li>
+    </ul>
+  </div>
+  <div id="menu">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../agenda.html">Agenda</a></li>
+      <li><a href="#">The Band</a>
+        <ul>
+          <li><a href="../director.html">The director</a></li>
+          <li><a href="../pictures.html">Pictures</a></li>
+          <li><a href="../history.html">The band History</a></li>
+        </ul>
+      </li>
+      <li><a href="../wePlayForYou.html">We play for You</a></li>
+      <li><a href="../comePlayWithUs.html">Come play with us</a></li>
+      <li><a href="../news.html">News</a></li>
+    </ul>
+  </div>
+  <div id="pageBody"><!-- TemplateBeginEditable name="content" -->
+    <h1> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h1>
+    <p><img src="../images/homeImage.jpg" alt="the band playin" width="300" height="201" class="floatLeft" />Quisque ut mi  nec dui tincidunt elementum. Suspendisse bibendum pulvinar est.  Curabitur vel lectus non velit congue consectetur quis sed libero. </p>
+    <p>Quisque commodo aliquet est vitae accumsan. Aenean quis quam urna. Sed  facilisis venenatis dictum. In ut odio eros, sit amet laoreet nulla.  Vivamus mi dolor, vulputate id condimentum pharetra, malesuada in augue. </p>
+    <h2>Sed a quam sem, in porta justo.</h2>
+    <p> Phasellus ac justo sapien, vitae mattis  justo. Cras malesuada posuere ante, non eleifend magna auctor sit amet.  Cras placerat mi eu lectus viverra rutrum. Phasellus pharetra auctor  urna vel faucibus. Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing  elit. Duis venenatis est pretium ante scelerisque mollis. Praesent vitae  metus accumsan nisl volutpat fermentum nec sed tortor. Nam malesuada  mauris ut ipsum porta porttitor. </p>
+    <p> Aenean commodo fringilla sapien, non pellentesque neque pellentesque  vel. Vestibulum nec venenatis ante. Donec semper scelerisque lectus  ultrices semper.</p>
+    <ul>
+      <li>Item 1</li>
+      <li>Item2</li>
+      <li>Item3</li>
+    </ul>
+    <p> Curabitur ac nulla neque, ac tristique lectus. Nulla a  tristique enim. </p>
+    <p>Quisque mi felis, ornare a aliquam a, volutpat at dui.  Proin egestas viverra tellus, sed egestas augue dapibus sed. Sed eu  scelerisque est. Etiam tristique, lectus et imperdiet blandit, dui urna  eleifend ligula, non ultrices odio risus vitae neque. Donec ornare  eleifend eleifend. Pellentesque ultricies bibendum risus eget faucibus.  Sed eu urna sem, ac commodo magna. </p>
+  <!-- TemplateEndEditable --></div>
+  <div id="footer">
+    <p>&copy; Copyright 2011 - HD Street Concert Band</p>
+  </div>
+</div>
+</body>
+</html>

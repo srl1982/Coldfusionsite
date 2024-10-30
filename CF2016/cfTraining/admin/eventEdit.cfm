@@ -1,0 +1,51 @@
+<!--- See if eventID parameter exists in the url --->
+<cfif NOT structKeyExists(url,'eventID')>
+    <cflocation url="events.cfm" >
+</cfif>
+
+<!--- Form processing --->
+<cfif structKeyExists(form,'fld_updateEventSubmit')>
+    <cfset aErrorMessage = application.eventsService.validateEventForm(form.fld_eventName,form.fld_eventDate,form.fld_eventLocation,form.fld_eventVenue,form.fld_eventDescription)>
+    <cfif arrayIsEmpty(aErrorMessage)>
+        <cfset application.eventsService.updateEvent(form.fld_eventName,form.fld_eventDate,form.fld_eventLocation,form.fld_eventVenue,form.fld_eventDescription,form.fld_eventID)>
+        <cflocation url="events.cfm?update=true" >
+    </cfif>
+</cfif>
+
+<!--- Retreive the current event data --->
+<cfset eventToUpdate = application.eventsService.getEventByID(url.eventID)>
+
+<cf_admin title="title Goes Here">
+    <div id="pageBody">
+        <h1>Update an event</h1>
+        <!---Display add event form--->
+		<cfform id="frm_updateEvent" preservedata="true">
+			<fieldset>
+				<!---Output error messages if any--->
+				<cfif isDefined('variables.aErrorMessages') AND NOT arrayIsEmpty(variables.aErrorMessages)>
+					<cfoutput>
+						<cfloop array="#variables.aErrorMessages#" index="message">
+							<p class="errorMessage">#message#</p>
+						</cfloop>
+					</cfoutput>
+				</cfif>
+				<legend>Add a new event</legend>
+				<dl>
+					<!---Display add event form fields--->
+					<dt><label for="fld_eventName">Event Name</label></dt>
+					<dd><cfinput type="text" name="fld_eventName" id="fld_eventName" value="#eventToUpdate.FLD_EVENTNAME#" required="true" message="Please provide a valid name for the event" validateAt="onSubmit"  /></dd>
+					<dt><label for="fld_eventDate">Event Date</label></dt>
+					<dd><cfinput type="datefield" mask="MM/DD/YYYY" name="fld_eventDate" id="fld_eventDate"  value="#dateFormat(eventToUpdate.FLD_EVENTDATETIME,"mm/dd/yyyy")#" required="true" message="Please provide a valid date for your event" validateAt="onSubmit" /></dd>
+					<dt><label for="fld_eventLocation">Event Location</label></dt>
+					<dd><cfinput name="fld_eventLocation" id="fld_eventLocation"  value="#eventToUpdate.FLD_EVENTLOCATION#" required="true" message="Please provide a location for youy new event" validateAt="onSubmit" /></dd>
+					<dt><label for="fld_eventVenue">Event Venue</label></dt>
+					<dd><cfinput name="fld_eventVenue" id="fld_eventVenue"  value="#eventToUpdate.FLD_EVENTVENUE#"/></dd>
+					<dt><label for="fld_eventDescription">Event Description</label></dt>
+					<dd><cftextarea name="fld_eventDescription" id="fld_eventDescription" required="true" value="#eventToUpdate.FLD_eventDescription#" message="Please, provide a short description for your event" validateAt="onSubmit" richtext="true" height="500" ></cftextarea></dd>
+                    <cfinput name="fld_eventID" type="hidden" value="#url.eventID#">
+				</dl>
+				<input type="submit" name="fld_updateEventSubmit" id="fld_updateEventSubmit" value="Update Event" />
+			</fieldset>
+		</cfform>
+    </div>
+</cf_admin>
